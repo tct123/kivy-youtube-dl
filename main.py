@@ -17,7 +17,7 @@ from kivymd.selectioncontrols import MDCheckbox
 from kivymd.snackbar import Snackbar
 from kivymd.theming import ThemeManager
 
-import thread
+import _thread
 import time
 from pytube import YouTube
 
@@ -36,7 +36,7 @@ class MyBoxLayout(BoxLayout):
 
 	def goButtonClicked(self, url):
 		self.ids.spinner.active = True
-		thread.start_new_thread( self.fetchVideo, (url,))
+		_thread.start_new_thread( self.fetchVideo, (url,))
 
 
 	def fetchVideo(self, url):
@@ -69,7 +69,7 @@ class MyBoxLayout(BoxLayout):
 		self.ids.spinner.active = False
 
 	def print_test(self):
-		print 'hello '
+		print ('hello ')
 
 	def resetApp(self):
 
@@ -85,7 +85,7 @@ class MyBoxLayout(BoxLayout):
 	
 	def updateProgressBar(self, init_download):
 		while True:
-			print round(self.download_status)
+			print (round(self.download_status))
 			time.sleep(1)
 			self.ids.progress_bar.value = round(self.download_status)
 			if self.ids.progress_bar.value == 100.0:
@@ -104,8 +104,8 @@ class MyBoxLayout(BoxLayout):
 
 	def downloadButtonClicked(self):
 		self.ids.spinner.active = True
-		thread.start_new_thread(self.downloadVideo, (self.selected,))
-		thread.start_new_thread(self.updateProgressBar, (self.download_status,))
+		_thread.start_new_thread(self.downloadVideo, (self.selected,))
+		_thread.start_new_thread(self.updateProgressBar, (self.download_status,))
 
 	def downloadComplete(self, stream, file_handle):
 		self.ids.spinner.active = False
