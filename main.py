@@ -8,13 +8,13 @@ from kivy.core.clipboard import Clipboard
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.checkbox import CheckBox
 
-from kivymd.bottomsheet import MDListBottomSheet
-from kivymd.button import MDRaisedButton
-from kivymd.button import MDFloatingActionButton
-from kivymd.label import MDLabel
-from kivymd.list import ILeftBodyTouch
+from kivymd.uix.bottomsheet import MDListBottomSheet
+from kivymd.uix.button import MDRaisedButton
+from kivymd.uix.button import MDFloatingActionButton
+from kivymd.uix.label import MDLabel
+from kivymd.uix.list import ILeftBodyTouch
 from kivymd.selectioncontrols import MDCheckbox
-from kivymd.snackbar import Snackbar
+from kivymd.uix.snackbar import Snackbar
 from kivymd.theming import ThemeManager
 
 import _thread
