@@ -1,10 +1,3 @@
-#:import MDRaisedButton kivymd.uix.button.MDRaisedButton
-#:import MDToolbar kivymd.uix.toolbar.MDToolbar
-#:import MDTextField kivymd.textfields.MDTextField
-#:import MDProgressBar kivymd.progressbar.MDProgressBar
-#:import MDSpinner kivymd.spinner.MDSpinner
-#:import MDList kivymd.list.MDList
-
 <MyBoxLayout>:
 	id: box_container
 	orientation: 'vertical'
@@ -24,8 +17,6 @@
 		MDTextField:
 			id: inputUrl
 			hint_text: "Enter URL here.."
-			color_mode: 'custom'
-			line_color_focus: 1, 1, 1, 1
 		MDRaisedButton:
 		    text: "Go"
 			on_press: box_container.goButtonClicked(inputUrl.text)
