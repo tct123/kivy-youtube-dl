@@ -1,5 +1,5 @@
 import kivy
-from kivy.app import App
+from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import ObjectProperty
@@ -13,7 +13,7 @@ from kivymd.uix.button import MDRaisedButton
 from kivymd.uix.button import MDFloatingActionButton
 from kivymd.uix.label import MDLabel
 from kivymd.uix.list import ILeftBodyTouch
-from kivymd.selectioncontrols import MDCheckbox
+from kivymd.uix.selectioncontrol import MDCheckbox
 from kivymd.uix.snackbar import Snackbar
 from kivymd.theming import ThemeManager
 
@@ -118,7 +118,7 @@ class MyBoxLayout(BoxLayout):
 	def pasteURL(self):
 		self.ids.inputUrl.text = Clipboard.paste()
 
-class MyApp(App):
+class MyApp(MDApp):
 	theme_cls = ThemeManager()
 	def build(self):
 		return MyBoxLayout()
