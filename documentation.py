@@ -12,7 +12,7 @@ from kivymd.uix.dialog import MDDialog
 from kivymd.uix.label import MDLabel
 from kivymd.uix.list import ILeftBody, ILeftBodyTouch, IRightBodyTouch, BaseListItem
 from kivymd.material_resources import DEVICE_TYPE
-from kivymd.uix.navigationdrawer import MDNavigationDrawer, NavigationDrawerHeaderBase
+from kivymd.uix.navigationdrawer import MDNavigationDrawer, MDNavigationDrawer
 from kivymd.selectioncontrols import MDCheckbox
 from kivymd.snackbar import Snackbar
 from kivymd.theming import ThemeManager
